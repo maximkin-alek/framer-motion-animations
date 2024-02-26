@@ -1,0 +1,21 @@
+.card {
+  position: relative;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: lightgreen;
+  border: 1px solid gray;
+  min-height: 50px;
+}
+
+.deleteButton {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 24px;
+  height: 24px;
+  background-image: url('../../public/delete.svg');
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
