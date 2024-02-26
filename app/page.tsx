@@ -1,12 +1,11 @@
 "use client";
 
 import styles from "./page.module.css";
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { CARDS } from "./data";
-import Card from "./components/Card";
+import { delay, motion } from "framer-motion";
 import List from "./components/List";
 import SortedBlock from "./components/SortedBlock";
+import ToUpButton from "./components/ToUpButton";
+import ScrollTriggedBlock from "./components/ScrollTriggedBlock";
 
 export default function Home() {
   return (
@@ -23,6 +22,10 @@ export default function Home() {
       <List />
 
       <SortedBlock />
+
+      <ScrollTriggedBlock />
+
+      <ToUpButton />
     </main>
   );
 }

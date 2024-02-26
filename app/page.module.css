@@ -52,3 +52,12 @@
   background-color: aqua;
 }
 
+.scrollSection {
+  margin-top: 100px;
+}
+
+.scrollBlocks {
+  padding: 100px 180px;
+  display: flex;
+  justify-content: space-between;
+}
