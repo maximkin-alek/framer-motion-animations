@@ -62,6 +62,27 @@
   justify-content: space-between;
 }
 
+.exit {
+  margin: 50px;
+  border: 1px solid black;
+  font-size: 20px;
+  background-color: darkslategrey;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.show {
+  margin: 50px 0;
+  width: 250px;
+  height: 50px;
+  background-color: darkseagreen;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
   .main {
     padding: 20px 16px;
@@ -84,5 +105,15 @@
   .buttons {
     flex-direction: column;
     gap: 8px;
+  }
+
+  .exitSection {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .exit, .show {
+    margin: 0;
   }
 }
