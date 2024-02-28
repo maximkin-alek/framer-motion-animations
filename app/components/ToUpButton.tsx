@@ -1,8 +1,7 @@
 "use client";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import Arrow from "./Arrow";
 import styles from "./ToUpButton.module.css";
-import { useEffect } from "react";
 
 const ToUpButton = (): JSX.Element => {
   const { scrollYProgress } = useScroll();

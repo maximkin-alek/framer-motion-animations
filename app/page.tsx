@@ -7,6 +7,7 @@ import SortedBlock from "./components/SortedBlock";
 import ToUpButton from "./components/ToUpButton";
 import ScrollTriggedBlock from "./components/ScrollTriggedBlock";
 import Exit from "./components/Exit";
+import Sidebar from "./components/Sidebar";
 
 export default function Home() {
   return (
@@ -27,6 +28,8 @@ export default function Home() {
       <ScrollTriggedBlock />
 
       <Exit />
+
+      <Sidebar />
 
       <ToUpButton />
     </main>

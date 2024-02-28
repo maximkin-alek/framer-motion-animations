@@ -1,3 +1,5 @@
+
+
 .main {
   display: flex;
   flex-direction: column;
@@ -16,11 +18,16 @@
   font-size: 20px;
 }
 
+.listTitle:focus {
+  outline: none;
+}
+
 .list {
   padding: 0;
 }
 
 .listItem {
+  max-width: 80%;
   list-style: none;
   color: black;
   border-radius: 8px;
@@ -113,7 +120,8 @@
     gap: 50px;
   }
 
-  .exit, .show {
+  .exit,
+  .show {
     margin: 0;
   }
 }
