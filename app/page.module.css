@@ -107,6 +107,32 @@
   cursor: pointer;
 }
 
+.divWrapper {
+  width: max-content;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.controledDiv {
+  width: 150px;
+  height: 150px;
+  background-color: #12de7b;
+  border: 1px solid grey;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hookButton {
+  height: 50px;
+  width: 200px;
+  background-color: aquamarine;
+  border: 1px solid grey;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
   .main {
     padding: 20px 16px;
@@ -148,5 +174,9 @@
   .exit,
   .show {
     margin: 0;
+  }
+
+  .divWrapper {
+    flex-direction: column;
   }
 }

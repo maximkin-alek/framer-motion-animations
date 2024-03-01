@@ -11,17 +11,24 @@ const Exit = (): JSX.Element => {
       <h2>Анимация скрытия</h2>
 
       <motion.button
-        layout
+        whileTap={{ scale: 1.05 }}
         className={styles.show}
         onClick={() => setIsVisible(true)}
       >
         Открыть
       </motion.button>
+
       <AnimatePresence>
         {isVisible && (
           <motion.button
             initial={{ rotate: 0, height: 0, width: 0 }}
-            animate={{ height: 50, width: 250 }}
+            animate={{
+              height: 50,
+              width: 250,
+              transition: {
+                duration: 0.5,
+              },
+            }}
             exit={{ rotate: [0, -45, 45, 0, 0], height: [50, 50, 50, 50, 0] }}
             onClick={() => setIsVisible(false)}
             transition={{ delay: 0.1, duration: 1 }}
