@@ -9,18 +9,24 @@ const Hooks = (): JSX.Element => {
 
   const handleRotateLeft = () => {
     controls.start({
-      rotate: -180,
+      rotate: -360,
       transition: {
-        duration: 1.5,
+        duration: 3,
+        repeat: Infinity,
+        ease: "linear",
+        repeatType: 'loop'
       },
     });
   };
 
   const handleRotateRight = () => {
     controls.start({
-      rotate: 180,
+      rotate: 360,
       transition: {
-        duration: 1.5,
+        duration: 3,
+        repeat: Infinity,
+        ease: "linear",
+        repeatType: 'loop'
       },
     });
   };
