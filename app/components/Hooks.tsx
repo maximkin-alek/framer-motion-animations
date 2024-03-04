@@ -1,20 +1,23 @@
 "use client";
 
 import styles from "../page.module.css";
-import { useAnimation, motion } from "framer-motion";
+import { useAnimation, motion, useMotionValue } from "framer-motion";
 import { useEffect } from "react";
 
 const Hooks = (): JSX.Element => {
   const controls = useAnimation();
+
+  const scale = useMotionValue(1);
+
+  useEffect(() => {
+    scale.on("change", (s) => console.log(s));
+  }, []);
 
   const handleRotateLeft = () => {
     controls.start({
       rotate: -360,
       transition: {
         duration: 3,
-        repeat: Infinity,
-        ease: "linear",
-        repeatType: 'loop'
       },
     });
   };
@@ -24,19 +27,22 @@ const Hooks = (): JSX.Element => {
       rotate: 360,
       transition: {
         duration: 3,
-        repeat: Infinity,
-        ease: "linear",
-        repeatType: 'loop'
       },
     });
   };
 
   return (
     <section>
-      <h2>Хук useAnimation</h2>
+      <h2>Хуки useAnimation и useMotionValue</h2>
 
       <div className={styles.divWrapper}>
-        <motion.button className={styles.hookButton} onClick={handleRotateLeft}>
+        <motion.button
+          whileTap={{ scale: 1.05 }}
+          whileHover={{ scale: 0.95 }}
+          className={styles.hookButton}
+          onClick={handleRotateLeft}
+          style={{ scale }}
+        >
           Вращать влево
         </motion.button>
         <motion.div
@@ -45,6 +51,8 @@ const Hooks = (): JSX.Element => {
           animate={controls}
         />
         <motion.button
+          whileTap={{ scale: 1.05 }}
+          whileHover={{ scale: 0.95 }}
           className={styles.hookButton}
           onClick={handleRotateRight}
         >
