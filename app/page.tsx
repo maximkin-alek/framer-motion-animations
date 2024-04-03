@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./page.module.css";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import List from "./components/List";
 import SortedBlock from "./components/SortedBlock";
 import ToUpButton from "./components/ToUpButton";

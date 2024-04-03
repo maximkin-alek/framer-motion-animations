@@ -30,14 +30,14 @@ const List = (): JSX.Element => {
       height: 24,
       padding: 8,
       marginBottom: 4,
-      border: '1px solid gray'
+      border: "1px solid gray",
     },
     hidden: {
       opacity: 0,
       height: 0,
       padding: 0,
       marginBottom: 0,
-      border: 0
+      border: 0,
     },
   };
 
